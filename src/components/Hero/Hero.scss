@@ -1,0 +1,42 @@
+.hero{
+    width: 100%;
+    position: relative;
+    .hero__img{
+        background: url("../../assets/heroo.png") no-repeat center;
+        width: 100%;
+        height: 640px;
+        .hero__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(476px);
+            .hero__title{
+                color: #fff;
+                font-size: 32px;
+                font-weight: 500;
+                font-family: Roboto;
+            }
+            .infos{
+                display: flex;
+                gap: 12px;
+                color: #fff;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            .hero__btn{
+                padding: 14px 137px;
+                border: none;
+                display: flex;
+                gap: 7px;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 12px;
+                color: #C61F1F;
+                font-size: 16px;
+                font-weight: 500;
+                font-family: Roboto;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.week{
+    margin-top: 100px;
+    .week__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .week__title{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Roboto;
+        }
+        .week__icon{
+            color: red;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: Roboto;
+        }
+    }
+    .week__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        .week__card{
+            .week__img{
+                width: 280px;
+                height: 400px;
+                border-radius: 12px;
+                margin-bottom: 12px;
+                background-color:#1D1D1D;
+            }
+            .week__text{
+                width: 280px;
+                padding: 0 10px;
+                .week__titles{
+                    font-size: 24px;
+                    font-weight: 500;
+                    font-family: Roboto;
+                    color: #fff;
+                }
+                .week__inf{
+                    font-weight: 500;
+                    font-family: Roboto;
+                    color: #4D4D4D;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
