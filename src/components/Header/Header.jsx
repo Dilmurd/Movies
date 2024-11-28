@@ -14,14 +14,16 @@ function Header() {
         <div className="container">
             <nav className="navbar">
                 <div className="navbar__logo">
+                    <Link to={"/"}>
                     <img src={logo} alt="" />
+                    </Link>
                 </div>
                 <ul className="navbar__collection">
                     <li className='navbar__item'>
                         <a href="" className='navbar__link'>
                             <div className='icons'>
                             <FaTv/>
-                            <Link to={"/"}>Афиша</Link>
+                            <Link to={"/afusha"}>Афиша</Link>
                             </div>
                         </a>
                     </li>
