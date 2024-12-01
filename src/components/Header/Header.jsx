@@ -20,36 +20,20 @@ function Header() {
                 </div>
                 <ul className="navbar__collection">
                     <li className='navbar__item'>
-                        <a href="" className='navbar__link'>
-                            <div className='icons'>
                             <FaTv/>
                             <Link to={"/afusha"}>Афиша</Link>
-                            </div>
-                        </a>
                     </li>
                     <li className='navbar__item'>
-                        <a href="" className='navbar__link'>
-                            <div className='icons'>
                             <MdOutlineTabletAndroid/>
                             <Link to={"/about"}>Сеансы</Link>
-                            </div>
-                        </a>
                     </li>
                     <li className='navbar__item'>
-                        <a href="" className='navbar__link'>
-                            <div className='icons'>
                             <HiOutlineTicket/>
                             <Link to={"/contact"}>Билеты</Link>
-                            </div>
-                        </a>
                     </li>
                     <li className='navbar__item'>
-                        <a href="" className='navbar__link'>
-                            <div className='icons'>
                             <FaSearch/>
                             <Link to={"/search"}>Поиск</Link>
-                            </div>
-                        </a>
                     </li>
                 </ul>
                 <button>Войти</button>

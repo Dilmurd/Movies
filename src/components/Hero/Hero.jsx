@@ -1,42 +1,46 @@
 import React from "react";
 import "./Hero.scss";
 import { FaPlay } from "react-icons/fa";
+import {useGetMovieQuery} from "../../redux/api/movie-api"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import { useState } from "react";
-import kung from "../../assets/kung.png"
-
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 function Hero() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+   const {data} = useGetMovieQuery()
   return (
-
     <main>
       <section className="hero">
         <div className="container__sm">
         <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
       >
-         
-        <SwiperSlide>
-        <div className="hero__img">
+          {
+            data?.results?.map(movie => (
+              <SwiperSlide>
+          <div className="hero__img">
+              <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="" />
             <div className="hero__text">
-              <h2 className="hero__title">Kung Fu Panda 4</h2>
+              <h2 className="hero__title">{movie.title}</h2>
               <div className="infos">
                 <p className="hero__inf">2024</p>
                 <p className="hero__inf">Комедия</p>
                 <p className="hero__inf">1ч 34м</p>
-                <p className="hero__inf">EN</p>
-                <p className="hero__inf">6+</p>
+                <p className="hero__inf">{movie.popularity}</p>
+                <p className="hero__inf">{movie.vote_average}</p>
               </div>
               <button className="hero__btn">
                 <FaPlay /> Смотреть
@@ -44,22 +48,10 @@ function Hero() {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>
+            ))
+          }
+          </Swiper>
       <div>
-
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
-        >
-      <SwiperSlide>
-          <img src={kung} />
-        </SwiperSlide> 
-      </Swiper>
         </div>
         </div>
       </section>

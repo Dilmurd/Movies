@@ -3,9 +3,8 @@
     margin-top: 120px;
     color: #fff;
     padding: 20px 40px;
-    font-family: Arial, sans-serif;
-  
-    &__container {
+    font-family: Roboto;
+    .footer__wrapper {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -17,10 +16,12 @@
       flex: 1;
       margin: 10px;
       min-width: 200px;
-  
       h4 {
         color: #e62e2e;
         margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Roboto;
       }
   
       ul {

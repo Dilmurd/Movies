@@ -1,15 +1,15 @@
 import React from "react";
 import "./Footer.scss";
-import play from "../../assets/playm.png"
-import app from "../../assets/app.png"
-import logo from "../../assets/lugo.png"
-import { FaInstagram,FaFacebook,FaYoutube } from "react-icons/fa";
-
+import play from "../../assets/playm.png";
+import app from "../../assets/app.png";
+import logo from "../../assets/lugo.png";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__container">
+      <div className="container">
+        <div className="footer__wrapper">
         <div className="footer__section">
           <div className="footer__logo">
             <img src={logo} alt="" />
@@ -44,10 +44,17 @@ const Footer = () => {
           <h4>Связаться с нами</h4>
           <p className="footer__phone">+998 (95) 897-33-38</p>
           <div className="footer__socials">
-            <i className="icon-instagram"><FaInstagram/></i>
-            <i className="icon-facebook"><FaFacebook/></i>
-            <i className="icon-youtube"><FaYoutube/></i>
+            <i className="icon-instagram">
+              <FaInstagram />
+            </i>
+            <i className="icon-facebook">
+              <FaFacebook />
+            </i>
+            <i className="icon-youtube">
+              <FaYoutube />
+            </i>
           </div>
+        </div>
         </div>
       </div>
     </footer>
