@@ -21,6 +21,26 @@
             font-family: Roboto;
         }
     }
+    .main__category{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+            button{
+                padding: 8px 15px;
+                font-size: 16px;
+                font-family: Roboto;
+                font-weight: 500;
+                border-radius: 12px;
+                background-color: red;
+                color: #fff;
+                border: none;
+                &:hover{
+                    background-color: #000;
+                    border: 5px solid red;
+                }
+            }
+}
     .week__wrapper{
         display: flex;
         grid-gap: 20px;
@@ -59,4 +79,20 @@
             }
         }
     }
+    .pagination{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        div{
+            color: red;
+        }
+        button{
+            color: red;
+
+            &:hover{
+                background-color: pink;
+            }
+        }
     }
+
+}

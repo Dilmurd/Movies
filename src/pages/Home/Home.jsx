@@ -5,7 +5,7 @@ import Week from '../../components/Week/Week'
 function Home() {
   return (
     <>
-    <Hero/>
+    <Hero />
     <Week/>
     </>
   )

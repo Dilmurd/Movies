@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 function Hero() {
-   const {data} = useGetMovieQuery()
+   const {data} = useGetMovieQuery({type: "upcoming",params: {page: 2}})
   return (
     <main>
       <section className="hero">

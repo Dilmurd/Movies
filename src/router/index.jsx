@@ -6,6 +6,7 @@ import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Search from "../pages/Search/Search";
 import Afusha from "../pages/Afusha/Afusha"
+import Detail from "../pages/Detail/Detail";
 
 function index() {
   return (
@@ -17,6 +18,7 @@ function index() {
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/movie/:id" element={<Detail />} />
         </Route>
       </Routes>
     </>
