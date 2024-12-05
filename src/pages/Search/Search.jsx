@@ -1,8 +1,12 @@
 import React from 'react'
+import Searches from '../../components/Searches/Searches'
 
 function Search() {
   return (
-    <div>Search</div>
+    <>
+    <Searches/>
+    </>
+
   )
 }
 

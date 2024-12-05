@@ -28,6 +28,13 @@ export const movieApi = api.injectEndpoints({
       }),
       providesTags: ["Movie"]
     }),
+    getMovieSearch: build.query({
+      query: (params) => ({
+        url: `/search/movie`,
+        params
+      }),
+      providesTags: ["Movie"]
+    }),
   }),
 })
 
@@ -37,4 +44,5 @@ export const {
   useGetMovieDiscoverQuery,
   useGetDetailQuery,
   useGetDetailimagesQuery,
+  useGetMovieSearchQuery
 } = movieApi

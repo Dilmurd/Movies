@@ -32,13 +32,9 @@
                 font-family: Roboto;
                 font-weight: 500;
                 border-radius: 12px;
-                background-color: red;
+                background-color: #000;
                 color: #fff;
-                border: none;
-                &:hover{
-                    background-color: #000;
-                    border: 5px solid red;
-                }
+                border: 2px solid #f2f2f2;
             }
 }
     .week__wrapper{

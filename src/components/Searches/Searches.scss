@@ -1,0 +1,36 @@
+.search{
+    margin-top: 10px;
+    h1{
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .search__inputs{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 1px;
+        input{
+            width: 500px;
+            height: 35px;
+            padding: 0 16px;
+            border: none;
+            outline: none;
+            border-radius: 12px 0 0 12px;
+            &::placeholder{
+                font-size: 14px;
+            }
+        }
+        button{
+            padding: 0 15px;
+            border-radius: 0 12px 12px 0;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: Roboto;
+            background-color: #ddd;
+            color: #1a1616;
+        }
+    }
+}
