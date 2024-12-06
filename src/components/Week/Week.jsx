@@ -4,7 +4,7 @@ import "./Week.scss";
 import { useGetMovieQuery } from "../../redux/api/movie-api";
 import { MOVIE_LISTS } from "../../static";
 import Pagination from "@mui/material/Pagination";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 function Week() {
   const [params,setParams] = useSearchParams()
@@ -33,7 +33,9 @@ function Week() {
           <div className="week__top">
             <p className="week__title">На неделе</p>
             <div className="week__icon">
+              <Link to={"/about"}>
               <p>Показать все</p>
+              </Link>
               <IoIosArrowForward />
             </div>
           </div>
