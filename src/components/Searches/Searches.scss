@@ -13,13 +13,14 @@
         gap: 1px;
         input{
             width: 500px;
-            height: 35px;
+            height: 45px;
             padding: 0 16px;
-            border: none;
-            outline: none;
+            border: 3px solid red;
+            background-color: #000;
+            outline: none ;
             border-radius: 12px 0 0 12px;
             &::placeholder{
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         button{

@@ -33,7 +33,7 @@ function Searches() {
             <div className="container">
                 <h1>Search</h1>
                 <form onSubmit={handleSearch} action="" className="search__inputs">
-                    <input value={searchValue} onChange={handleChange}  type="search" placeholder='Find Anything' />
+                    <input value={searchValue} onChange={handleChange}  type="search" placeholder='Search' />
                     <button>Search</button>
                 </form>
                     <Movies data={data?.results}/>
