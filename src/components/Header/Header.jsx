@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Header.scss"
 import logo from "../../assets/navbar.logo.svg"
 import { FaTv,FaSearch } from 'react-icons/fa'
 import { MdOutlineTabletAndroid } from "react-icons/md";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
-import { IoIosArrowDown } from "react-icons/io";
+import { useTranslation } from 'react-i18next';
 
 
 
 function Header() {
+    const [lang,setLang] = useState("uz")
+    const {t,i18n} = useTranslation()
+    useEffect(()=> {
+        i18n.changeLanguage(lang)
+    },[])
   return (
     <header className='header'>
         <div className="container">
@@ -22,22 +27,28 @@ function Header() {
                 <ul className="navbar__collection">
                     <li className='navbar__item'>
                             <FaTv/>
-                            <Link to={"/afusha"}>Афиша</Link>
+                            <Link to={"/"}>{t("header.poster")}</Link>
                     </li>
                     <li className='navbar__item'>
                             <MdOutlineTabletAndroid/>
-                            <Link to={"/about"}>Сеансы</Link>
+                            <Link to={"/about"}>{t("header.genre")}</Link>
                     </li>
                     <li className='navbar__item'>
                             <HiOutlineTicket/>
-                            <Link to={"/contact"}>Билеты</Link>
+                            <Link to={"/contact"}>{t("header.favourite")}</Link>
                     </li>
                     <li className='navbar__item'>
                             <FaSearch/>
-                            <Link to={"/search"}>Поиск</Link>
+                            <Link to={"/search"}>{t("header.search")}</Link>
                     </li>
                 </ul>
+                <div className='language'>
+                    <select value={lang} onChange={e => setLang(e.target.value)} name="" id="">
+                        <option value="ru">ru</option>
+                        <option value="uz">uz</option>
+                    </select>
                 <button>Войти</button>
+                </div>
             </nav>
         </div>
     </header>

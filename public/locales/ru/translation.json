@@ -1,0 +1,28 @@
+{
+    "header": {
+        "poster": "Афиша",
+        "genre": "Жанры",
+        "favourite": "Сохранено",
+        "search": "Поиск",
+        "button": "Войти"
+    },
+    "footer":{
+        "about": "О нас",
+        "public": "Публичная оферта",
+        "advertising": "Реклама",
+        "faq": "F.A.Q",
+        "contact": "Контакты",
+        "category": "Категории",
+        "movie": "Кино",
+        "theater": "Театр",
+        "concerts": "Концерты",
+        "sport": "Спорт",
+        "contacts": "Связаться с нами",
+        "social": "Социальные сети"
+    },
+    "week": {
+        "weeks": "На неделе",
+        "button": "Показать все"
+    },
+    "play": "Смотреть"
+}

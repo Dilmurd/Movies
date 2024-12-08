@@ -4,8 +4,10 @@ import play from "../../assets/playm.png";
 import app from "../../assets/app.png";
 import logo from "../../assets/lugo.png";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const {t,i18n} = useTranslation()
   return (
     <footer className="footer">
       <div className="container">
@@ -21,27 +23,27 @@ const Footer = () => {
         </div>
 
         <div className="footer__section">
-          <h4>О нас</h4>
+          <h4>{t("footer.about")}</h4>
           <ul>
-            <li>Публичная оферта</li>
-            <li>Реклама</li>
-            <li>F.A.Q</li>
-            <li>Контакты</li>
+            <li>{t("footer.public")}</li>
+            <li>{t("footer.advertising")}</li>
+            <li>{t("footer.faq")}</li>
+            <li>{t("footer.contact")}</li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h4>Категории</h4>
+          <h4>{t("footer.category")}</h4>
           <ul>
-            <li>Кино</li>
-            <li>Театр</li>
-            <li>Концерты</li>
-            <li>Спорт</li>
+            <li>{t("footer.movie")}</li>
+            <li>{t("footer.theater")}</li>
+            <li>{t("footer.concerts")}</li>
+            <li>{t("footer.social")}</li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h4>Связаться с нами</h4>
+          <h4>{t("footer.contacts")}</h4>
           <p className="footer__phone">+998 (95) 897-33-38</p>
           <div className="footer__socials">
             <i className="icon-instagram">

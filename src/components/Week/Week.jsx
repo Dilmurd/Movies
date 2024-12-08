@@ -5,6 +5,7 @@ import { useGetMovieQuery } from "../../redux/api/movie-api";
 import { MOVIE_LISTS } from "../../static";
 import Pagination from "@mui/material/Pagination";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Week() {
   const [params,setParams] = useSearchParams()
@@ -12,6 +13,7 @@ function Week() {
   const [type, setType] = useState(params.get("path") || "now_playing");
   const { data } = useGetMovieQuery({ type, params:{page} });
   const navigate = useNavigate()
+  const {t,i18n} =  useTranslation()
 
   const handleChange = (event,value) => {
     setPage(value);
@@ -31,10 +33,10 @@ function Week() {
       <section className="week">
         <div className="container">
           <div className="week__top">
-            <p className="week__title">На неделе</p>
+            <p className="week__title">{t("week.weeks")}</p>
             <div className="week__icon">
               <Link to={"/about"}>
-              <p>Показать все</p>
+              <p>{t("week.button")}</p>
               </Link>
               <IoIosArrowForward />
             </div>
