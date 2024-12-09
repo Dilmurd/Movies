@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import "./Header.scss"
 import logo from "../../assets/navbar.logo.svg"
 import { FaTv,FaSearch } from 'react-icons/fa'
@@ -6,15 +6,13 @@ import { MdOutlineTabletAndroid } from "react-icons/md";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Language from '../Language/Language';
 
 
 
 function Header() {
-    const [lang,setLang] = useState("uz")
     const {t,i18n} = useTranslation()
-    useEffect(()=> {
-        i18n.changeLanguage(lang)
-    },[])
+  
   return (
     <header className='header'>
         <div className="container">
@@ -43,10 +41,7 @@ function Header() {
                     </li>
                 </ul>
                 <div className='language'>
-                    <select value={lang} onChange={e => setLang(e.target.value)} name="" id="">
-                        <option value="ru">ru</option>
-                        <option value="uz">uz</option>
-                    </select>
+                    <Language/>
                 <button>Войти</button>
                 </div>
             </nav>
